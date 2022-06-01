@@ -9,7 +9,7 @@ button.addEventListener('click', () => toggleForm(true));
 const backButton = document.getElementById('back-btn');
 backButton.addEventListener('click', () => toggleForm(false));
 
-const modalContainer = document.getElementsByClassName('modal-window-container');
+const modalContainer = document.querySelector('.modal-window-container');
 modalContainer.addEventListener('click', () => toggleForm(false));
 
 const modalWindow = document.querySelector('.modal-window');
