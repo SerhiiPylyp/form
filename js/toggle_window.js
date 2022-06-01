@@ -1,6 +1,10 @@
 const toggleForm = (isOpenWindow) => {
     const modalWindow = document.querySelector('.modal-window-container');
     modalWindow.style.display = isOpenWindow ? 'flex' : 'none';
+    if (!isOpenWindow) {
+        const inputs = modalWindow.querySelectorAll('input');
+        inputs.forEach((input) => input.value = '');
+    }
 }
 
 const button = document.getElementById('open-form');
