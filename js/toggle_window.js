@@ -4,6 +4,9 @@ const toggleForm = (isOpenWindow) => {
     if (!isOpenWindow) {
         const inputs = modalWindow.querySelectorAll('input');
         inputs.forEach((input) => input.value = '');
+        const errors = modalWindow.querySelectorAll('.inputs>span');
+        errors.forEach((error) => error.style.display = 'none');
+        modalWindow.querySelectorAll('.input-valid').forEach(el => el.classList.remove('input-valid'));
     }
 }
 
@@ -11,7 +14,10 @@ const button = document.getElementById('open-form');
 button.addEventListener('click', () => toggleForm(true));
 
 const backButton = document.getElementById('back-btn');
-backButton.addEventListener('click', () => toggleForm(false));
+backButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggleForm(false);
+});
 
 const modalContainer = document.querySelector('.modal-window-container');
 modalContainer.addEventListener('click', () => toggleForm(false));

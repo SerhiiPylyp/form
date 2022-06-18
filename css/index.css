@@ -72,30 +72,24 @@ input {
   padding: 0 10px;
 }
 
-#full-name {
-  margin-bottom: 30px;
-}
-
 #mobile-number {
   margin-bottom: 25px;
 }
 
 #mail {
-  margin-bottom: 10px;
   size: 12px;
-}
-
-label, .notes {
-  font-weight: 500;
-  line-height: 24px;
 }
 
 label {
   size: 16px;
 }
 
-.notes {
-  size: 14px;
+.input-valid::before {
+  display: flex;
+  content: url("../img/checkbox.svg");
+  position: absolute;
+  right: -5%;
+  bottom: 20px;
 }
 
 #mobile-number::-webkit-inner-spin-button {
@@ -131,4 +125,31 @@ button {
   margin-bottom: 25px;
   background: #FFFFFF;
   color: #0095f6;
+}
+
+.success {
+  border: 1px solid green;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.inputs span {
+  background: #FFF;
+  display: none;
+  color: #f60000;
+  position: absolute;
+  bottom: 1px;
+  left: 1px;
+  width: 100%;
+  padding: 0 10px;
+  box-sizing: border-box;
+  border: 1px solid #f60000;
+  border-radius: 8px;
+  height: 57px;
+  line-height: 57px;
 }
