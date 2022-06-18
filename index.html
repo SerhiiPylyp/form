@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="non-js" lang="">
+<html>
 <head>
   <meta charset="utf-8">
   <title>Form</title>
@@ -18,14 +18,22 @@
         <img id="logo" src="../img/111.png">
       </header>
       <form>
-        <label for="full-name" id="full-name-label">Имя и фамилия</label>
-        <input id="full-name" type="text">
-        <label for="mobile-number" id="mobile-number-label">Мобильный номер</label>
-        <input id="mobile-number" type="number" placeholder="_ _ _  _ _ _  _ _  _ _">
-        <label for="mail">Почта</label>
+        <div class="inputs">
+          <label for="full-name" id="full-name-label">Имя и фамилия</label>
+          <input id="full-name" type="text">
+          <span class="error-name">Введите имя и фамилию</span>
+        </div>
+        <div class="inputs">
+          <label for="mobile-number" id="mobile-number-label">Мобильный номер</label>
+          <input id="mobile-number" type="number" placeholder="_ _ _  _ _ _  _ _  _ _">
+          <span class="error-num">Введите мобильный номер</span>
+        </div>
+        <div class="inputs">
+        <label for="mail" id="email-label">Почта</label>
         <input id="mail" type="email">
-        <span class="notes">не обязательно заполнять</span>
-        <button id="send-btn">Отправить</button>
+        <span class="error-email">Неверный email</span>
+        </div>
+        <button id="send-btn" type="submit">Отправить</button>
         <button id="back-btn">Назад</button>
         <span class="notes">
           Нажимая кнопку "Отправить", вы соглашаетесь на передачу ваших данных и на их дальнейшую обработку.
