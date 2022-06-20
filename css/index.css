@@ -61,7 +61,6 @@ form {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
 }
 
 input {
@@ -85,7 +84,7 @@ label {
   content: url("../img/checkbox.svg");
   position: absolute;
   right: -5%;
-  bottom: 20px;
+  bottom: 45px;
 }
 
 #mobile-number::-webkit-inner-spin-button {
@@ -132,6 +131,7 @@ button {
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  padding-bottom: 25px;
 }
 
 .inputs span {
@@ -139,8 +139,7 @@ button {
   display: none;
   color: #f60000;
   position: absolute;
-  bottom: 1px;
-  left: 1px;
+  bottom: 26px;
   width: 100%;
   padding: 0 10px;
   box-sizing: border-box;
@@ -148,4 +147,19 @@ button {
   border-radius: 8px;
   height: 57px;
   line-height: 57px;
+}
+
+@media screen and (max-width: 420px){
+  .modal-window {
+    padding: 24px 15px 30px 15px;
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+  .input-valid::before {
+    right: 2%;
+  }
+  input {
+    padding-right: 30px;
+  }
 }
