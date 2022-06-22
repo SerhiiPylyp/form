@@ -1,3 +1,7 @@
+if (localStorage.getItem('name')) {
+    window.location.href = "/form/success.html";
+}
+
 const operators = ['096', '097', '098', '067', '068','066', '093', '063'];
 const MIN_NAME = 3;
 const MAX_NAME = 30;
@@ -39,12 +43,18 @@ const validateForm = (e) => {
     validateField('.error-email', email, isValidEmail);
 }
 
-const onSubmit = () => window.open("/form/success.html");
+const onSubmit = () => {
+    localStorage.setItem('name', fullName.value);
+    localStorage.setItem('phone', phone.value);
+    localStorage.setItem('email', email.value);
+}
 
 const clearError = (error, input) => {
     error.style.display = 'none';
     input.focus();
+
 }
+
 
 fullName.addEventListener('blur', () => fullName.value = fullName.value.trim());
 fullName.addEventListener('input', validateFullName);

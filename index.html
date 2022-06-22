@@ -8,14 +8,13 @@
   <link href='http://fonts.googleapis.com/css?family=Philosopher&subset=cyrillic' rel='stylesheet' type='text/css'>
 </head>
 <body>
-  <div>Form</div>
   <div class="open-modal-window">
-  <button id="open-form">Открыть окно</button>
+  <button id="open-form">Авторизация</button>
   </div>
   <div class="modal-window-container">
     <div class="modal-window">
       <header>
-        <span>Форма</span>
+        <span>Авторизация</span>
         <img id="logo" src="../img/logo.png">
       </header>
       <form>
@@ -34,15 +33,16 @@
         <input id="mail" type="email">
         <span class="error-email">Неверный email</span>
         </div>
-        <button id="send-btn" type="submit">Отправить</button>
+        <button id="send-btn" type="submit">Войти</button>
         <button id="back-btn">Назад</button>
         <span class="notes">
-          Нажимая кнопку "Отправить", вы соглашаетесь на передачу ваших данных и на их дальнейшую обработку.
+          Нажимая кнопку "Войти", вы соглашаетесь на передачу ваших данных и на их дальнейшую обработку.
         </span>
       </form>
     </div>
   </div>
   <script src="js/toggle_window.js"></script>
   <script src="js/form_validation.js"></script>
+  <script src="js/authorization.js"></script>
 </body>
 </html>
