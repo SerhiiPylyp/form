@@ -71,14 +71,6 @@ input {
   padding: 0 10px;
 }
 
-#mail {
-  size: 12px;
-}
-
-label {
-  size: 16px;
-}
-
 .input-valid::before {
   display: flex;
   content: url("../img/checkbox.svg");

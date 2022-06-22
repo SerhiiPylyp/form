@@ -1,12 +1,29 @@
 <!doctype html>
 <html class="non-js" lang="">
     <head>
+        <meta name = "viewport" content = "width=device-width, initial-scale = 1">
         <meta charset="utf-8">
-        <title>Form2</title>
-        <link rel="stylesheet" href="css/index.css">
+        <title>Authorization</title>
+        <link rel="stylesheet" href="css/authorization.css">
         <link href='http://fonts.googleapis.com/css?family=Philosopher&subset=cyrillic' rel='stylesheet' type='text/css'>
     </head>
     <body>
-    <div>SUCCESS</div>
+        <div class="data">
+            <header>Личные данные</header>
+            <div>
+                <span>Имя и фамилия: </span>
+                <span class="fields" id="value-name"></span>
+            </div>
+            <div>
+                <span>Номер телефона: </span>
+                <span class="fields" id="value-tel"></span>
+            </div>
+            <div>
+                <span>Email: </span>
+                <span class="fields" id="value-email"></span>
+            </div>
+            <button>Выход</button>
+        </div>
     </body>
+    <script src="js/authorization.js"></script>
 </html>
